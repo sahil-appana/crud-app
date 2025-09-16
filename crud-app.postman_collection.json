@@ -1,0 +1,92 @@
+{
+  "info": {
+    "name": "CRUD App - Spring Boot",
+    "_postman_id": "abcd1234-5678-90ef-1234-567890abcdef",
+    "description": "Postman collection to test CRUD API endpoints for the Spring Boot CRUD app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "users"]
+        }
+      }
+    },
+    {
+      "name": "Get User by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/users/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "users", "1"]
+        }
+      }
+    },
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Satya\",\n    \"email\": \"satya@example.com\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "users"]
+        }
+      }
+    },
+    {
+      "name": "Update User",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Satya Updated\",\n    \"email\": \"sahil@example.com\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/users/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "users", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete User",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/users/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "users", "1"]
+        }
+      }
+    }
+  ]
+}
